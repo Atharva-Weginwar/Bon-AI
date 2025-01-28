@@ -2,7 +2,6 @@ from utils.llm_helper import LLMHelper
 from typing import Dict, Optional
 import requests
 from bs4 import BeautifulSoup
-import praw
 import re
 import os
 import json
@@ -13,12 +12,6 @@ class WebAgent:
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
         }
-        # Initialize Reddit client
-        self.reddit = praw.Reddit(
-            client_id=os.getenv('REDDIT_CLIENT_ID'),
-            client_secret=os.getenv('REDDIT_CLIENT_SECRET'),
-            user_agent="CreditCardRAGBot/1.0"
-        )
         # Store card data with application links
         self.card_data = {
             "Chase Freedom Unlimited®": {
