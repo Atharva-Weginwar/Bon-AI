@@ -1,0 +1,14 @@
+streamlit
+pinecone-client>=2.2.0
+python-dotenv
+together
+boto3
+langchain
+pandas
+PyPDF2
+docx2txt
+pillow
+numpy
+openai
+beautifulsoup4==4.12.2
+requests==2.31.0 
