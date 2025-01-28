@@ -8,9 +8,7 @@ import streamlit as st
 
 class LLMHelper:
     def __init__(self):
-        # Use st.secrets in production, fallback to os.environ for local development
-        api_key = st.secrets["OPENAI_API_KEY"] if "OPENAI_API_KEY" in st.secrets else os.getenv('OPENAI_API_KEY')
-        self.client = openai.OpenAI(api_key=api_key)
+        self.client = openai.OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
         self.model = "gpt-3.5-turbo"
         self.max_retries = 3
         self.base_delay = 1  # Base delay in seconds

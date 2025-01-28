@@ -17,8 +17,6 @@ def main():
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
-    st.title("Credit Card RAG Assistant")
-    
     # Initialize helpers
     llm = LLMHelper()
     pinecone_helper = PineconeHelper()
@@ -89,14 +87,14 @@ def main():
                     })
 
 if __name__ == "__main__":
-    # Set page config for wider layout and collapsible sidebar
+    # Update page config title
     st.set_page_config(
-        page_title="Credit Card RAG Assistant",
+        page_title="Bon AI",
         layout="wide",
-        initial_sidebar_state="collapsed"  # Start with collapsed sidebar
+        initial_sidebar_state="collapsed"
     )
     
-    # Add custom CSS for sidebar toggle
+    # Add custom CSS for sidebar toggle and centered title
     st.markdown("""
         <style>
         .stButton button {
@@ -105,7 +103,6 @@ if __name__ == "__main__":
             padding: 0;
             font-size: 24px;
         }
-        /* Center the title */
         .title-center {
             text-align: center;
             padding: 1rem;

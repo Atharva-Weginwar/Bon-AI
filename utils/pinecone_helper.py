@@ -2,6 +2,7 @@ import sys
 from pinecone import Pinecone  # This is the correct import
 from typing import List, Dict
 import os
+import streamlit as st
 
 class PineconeHelper:
     def __init__(self):
